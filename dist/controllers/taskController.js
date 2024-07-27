@@ -26,7 +26,6 @@ const getTasks = (0, express_async_handler_1.default)((req, res, next) => __awai
 exports.getTasks = getTasks;
 const createTask = (0, express_async_handler_1.default)((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const user = req.user;
-    console.log("user", user);
     const task = yield Tasks_1.default.create(Object.assign(Object.assign({}, req.body), { user_id: user.id }));
     res.status(201).json({
         message: "Task created successfully",

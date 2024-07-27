@@ -3,13 +3,13 @@ import dotenv from "dotenv";
 import express from "express";
 import { Request, Response } from "express";
 
-import auth from "./src/routes/auth";
-import users from "./src/routes/users";
-import tasks from "./src/routes/tasks";
-import connectDB from "./src/config/dbConnection";
-import { errorHandler } from "./src/middleware/errorHandler";
-import { authMiddleware } from "./src/middleware/authMiddleware";
-import { AppName, AppVersion, basePath } from "./src/config/AppConfig";
+import auth from "./routes/auth";
+import users from "./routes/users";
+import tasks from "./routes/tasks";
+import connectDB from "./config/dbConnection";
+import { errorHandler } from "./middleware/errorHandler";
+import { authMiddleware } from "./middleware/authMiddleware";
+import { AppName, AppVersion, basePath } from "./config/AppConfig";
 
 dotenv.config();
 connectDB();
