@@ -39,6 +39,7 @@ app.use(basePath, authMiddleware, users);
 app.use(basePath, authMiddleware, tasks);
 
 app.use(errorHandler);
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
