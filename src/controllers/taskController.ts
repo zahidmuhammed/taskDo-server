@@ -19,8 +19,6 @@ const createTask = asyncHandler(
     async (req: Request, res: Response, next: NextFunction) => {
         const user = (req as any).user;
 
-        console.log("user", user);
-
         const task = await Task.create({ ...req.body, user_id: user.id });
         res.status(201).json({
             message: "Task created successfully",
