@@ -20,7 +20,11 @@ const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 5000;
 app.use(
     "/*",
     cors({
-        origin: ["http://localhost:5001"],
+        origin: [
+            "http://localhost:5001",
+            "http://localhost:3000",
+            "https://workflow-crework.vercel.app",
+        ],
     })
 );
 
